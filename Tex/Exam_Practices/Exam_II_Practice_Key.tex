@@ -1,0 +1,425 @@
+\documentclass{exam}
+\usepackage{amsmath,enumerate,tikz,xcolor}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+\RequirePackage{tikz, pgflibraryplotmarks}
+
+\pagestyle{empty}
+\textwidth16cm
+\textheight23cm
+\oddsidemargin0pt
+\topmargin-50pt
+\def\R{\rule[-1ex]{0ex}{3.5ex}}
+\def\ans#1{\hfill \textcolor{lightgray}{#1}}
+
+\begin{document}
+\noindent
+Tougaloo College\hfill MATH 221 \\
+Fall 2018 \hfill %{\small Due date: Mar. 24}
+\begin{center}
+{\bf Exam 2 Practice} 
+\end{center}
+
+\medskip
+\noindent
+Name:\underline{\hspace{3in}} \hfill Score:\underline{\hspace{0.8in}}
+
+\medskip
+\begin{enumerate}
+\item
+Use the Limit Definition of the Derivative 
+\[
+f^{\prime}(x)=\lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}
+\]
+to find $f^{\prime}(x)$. %\ans{(sec. 1.6 \#40)}
+\begin{parts}
+\part $f(x)=\pi$
+\part $f(x)=-2x+5$
+\part $f(x)=3x^{2}-5x+4$
+\part $f(x)=x^{3}$
+\part $f(x)=\frac{6}{x}$
+\part $f(x)=\frac{1}{2-x}$
+\part $f(x)=\sqrt{x-2}$
+\end{parts}
+
+\begin{align*}
+  f^{\prime}(x) & = \lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}\\
+                & = \lim_{h\rightarrow 0}\frac{\pi-\pi}{h}
+\end{align*}
+
+
+
+
+\newpage
+
+
+
+
+
+
+\item Let
+\[
+f(x)=\left\{
+\begin{array}{ll}
+      -7x^{2}+2x, & x<0 \\
+      4x^{2}-2,& x\geq 0\\
+\end{array} 
+\right.
+\]
+According to the definition of derivative, to compute $f^{\prime}(0)$. (Hint: we need to compute the left hand limit and the right hand limit)
+\begin{align*}
+\text{LHS} & = \lim_{h\rightarrow 0^{-}}\frac{f(x+h)-f(x)}{h}\\
+      & = \lim_{h\rightarrow 0^{-}}\frac{-7(x+h)^{2}+2(x+h)-(-7x^{2}+2x)}{h}\\
+      & = \lim_{h\rightarrow 0^{-}}\frac{-7x^{2}-14hx-7h^{2}+2x+2h+7x^{2}-2x}{h}\\
+      & = \lim_{h\rightarrow 0^{-}}\frac{-14hx-7h^{2}+2h}{h}\\
+      & = \lim_{h\rightarrow 0^{-}}\frac{h(-14x-7h+2)}{h}\\
+      & = \lim_{h\rightarrow 0^{-}}(-14x-7h+2)\\
+      & = -14x+2 \\
+f^{\prime}(0) & = 2
+\end{align*}
+\begin{align*}
+\text{RHS} & = \lim_{h\rightarrow 0^{+}}\frac{f(x+h)-f(x)}{h}\\
+      & = \lim_{h\rightarrow 0^{+}}\frac{4(x+h)^{2}-2-(4x^{2}-2)}{h}\\
+      & = \lim_{h\rightarrow 0^{+}}\frac{4x^{2}+8hx+4h^{2}-4x^{2}+2}{h}\\
+      & = \lim_{h\rightarrow 0^{+}}\frac{8hx+4h^{2}}{h}\\
+      & = \lim_{h\rightarrow 0^{+}}\frac{h(8x+4h)}{h}\\
+      & = \lim_{h\rightarrow 0^{+}}(8x+4h)\\
+      & =8x\\
+f^{\prime}(0) & = 0
+\end{align*}
+Thus, $LHS \neq RHS$, $f^{\prime}(0)$ DNE
+
+
+%\item The graph of $f$ is given above. Sketch the graph of $f^{\prime}$.
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=2in]{Derivative.eps}
+%    \label{fig:sample_figure}
+%\end{figure}
+%\vfill
+
+\item
+Find $f^{\prime}(x), f^{\prime\prime}(x)$, and $f^{\prime\prime\prime}(x)$.  %\ans{(sec. 0.8 \#15)}
+
+\begin{parts}
+\part 
+\begin{align*}
+f(x)&=9\sqrt[3]{x^{2}}=9x^{\frac{2}{3}}\\
+  f^{\prime}(x) & = 9\frac{2}{3}x^{-\frac{1}{3}}=6x^{-\frac{1}{3}}\\
+  f^{\prime\prime}(x) & = -6\frac{1}{3}x^{-\frac{4}{3}}=-2x^{-\frac{4}{3}}\\
+  f^{\prime\prime\prime}(x) & = \frac{8}{3}x^{-\frac{7}{3}}
+\end{align*}
+\part 
+\begin{align*}
+h(x)&=e^{x+2}+1\\
+  h^{\prime}(x) & = e^{x+2}(x+2)^{\prime}=e^{x+2}\\
+  h^{\prime\prime}(x) & = e^{x+2}(x+2)^{\prime}=e^{x+2}\\
+  h^{\prime\prime\prime}(x) & = e^{x+2}(x+2)^{\prime}=e^{x+2}
+\end{align*}
+\part
+\begin{align*}
+g(x)&=\frac{2}{x^{3}}+3e^{x}+x^{7}=2{x^{-3}}+3e^{x}+x^{7}\\
+g^{\prime}(x) & = -6{x^{-4}}+3e^{x}+7x^{6}\\
+g^{\prime\prime}(x) & = 24{x^{-5}}+3e^{x}+42x^{5}\\
+g^{\prime\prime\prime}(x) & = -120{x^{-6}}+3e^{x}+210x^{4}
+\end{align*}
+\part 
+\begin{align*}
+f(x)&=xe^{x}\\
+  f^{\prime}(x) & = e^{x}+xe^{x}\\
+  f^{\prime\prime}(x) & =2e^{x}+xe^{x}\\
+  f^{\prime\prime\prime}(x) & = 3e^{x}+xe^{x}
+\end{align*}
+\end{parts}
+
+
+\item Use the definition of the derivative to show that $f^{\prime}(0)$ does not exist 
+\begin{parts}
+\part 
+\begin{align*}
+f(x)&=x^{\frac{3}{5}}\\
+  f^{\prime}(x) & = \frac{3}{5}x^{-\frac{2}{5}}\\
+                & = \frac{3}{5\sqrt[5]{x^{2}}}
+\end{align*}
+Where $f^{\prime}(x)$ is undefined at $x=0$. Thus $f^{\prime}(0)$ does not exist 
+\part  
+\[
+f(x)=|x|=\left\{
+\begin{array}{ll}
+      -x, & x<0 \\
+      x,& x\geq 0\\
+\end{array} 
+\right.
+\]
+\begin{align*}
+  RHS & = \lim_{h\rightarrow 0^{+}}\frac{f(x+h)-f(x)}{h}\\
+                & = \lim_{h\rightarrow 0^{-}}\frac{x+h-x}{h}\\
+                & = 1
+\end{align*}
+\begin{align*}
+  LHS & = \lim_{h\rightarrow 0^{-}}\frac{f(x+h)-f(x)}{h}\\
+                & = \lim_{h\rightarrow 0^{-}}\frac{-(x+h)-(-x)}{h}\\
+                & = -1
+\end{align*}
+Thus $LHS\neq RHS$, Thus $f^{\prime}(0)$ does not exist 
+
+\end{parts}
+
+
+
+\newpage
+
+
+
+\item Differentiate the following functions with Derivative Rules
+\begin{parts}
+\part 
+\begin{align*}
+f(x)& = 5x^{3}-\frac{3}{x^{2}}+\frac{1}{\sqrt{x}}+\frac{\sqrt[3]{x}}{6}-2\\
+    & = 5x^{3}-3x^{-2}+x^{-\frac{1}{2}}+\frac{1}{6}x^{\frac{1}{3}}-2\\
+  f^{\prime}(x) & = 15x^{2}+6x^{-3}-\frac{1}{2}x^{-\frac{3}{2}}+\frac{1}{18}x^{-\frac{2}{3}}
+\end{align*}
+\part $h(x)=\frac{x^{2}+5x-1}{2x^{2}}$
+\begin{align*}
+h(x)& = \frac{x^{2}+5x-1}{2x^{2}}\\
+    & = 5x^{3}-3x^{-2}+x^{-\frac{1}{2}}+\frac{1}{6}x^{\frac{1}{3}}-2\\
+h^{\prime}(x) & = 15x^{2}+6x^{-3}-\frac{1}{2}x^{-\frac{3}{2}}+\frac{1}{18}x^{-\frac{2}{3}}
+\end{align*}
+\part $q(w)=(w^{2}-3w+1)(w^{3}-2)$
+\vfill
+\part $N(x)=\frac{\frac{4}{x^{2}}}{\frac{3}{x}+2}$
+\vfill
+\part $f(x)=\sqrt{x^{2}+1}$
+\vfill
+\part $g(t)=\left(\frac{t-2}{2t+1}\right)^{9}$\\
+Let $u=\frac{t-2}{2t+1}$, the $g=u^{9}$. Take derivatives, we have $\frac{dg}{du}=9u^{8}$ and \\
+$\frac{du}{dt}= \frac{(t-2)^{\prime}(2t+1)-(t-2)(2t+1)^{\prime}}{(2t+1)^{2}}=\frac{(2t+1)-2(t-2)}{(2t+1)^{2}}$\\
+\begin{align*}
+\frac{dh}{dx} &=\frac{dh}{du}\cdot\frac{du}{dx}=9u^{8}\cdot \frac{(2t+1)-2(t-2)}{(2t+1)^{2}}\\
+              &=\frac{dh}{du}\cdot\frac{du}{dx}=9\left(\frac{t-2}{2t+1}\right)^{8}\cdot \frac{(2t+1)-2(t-2)}{(2t+1)^{2}}
+\end{align*}
+\part $y=(2x+1)^{5}(x^{3}-x+1)^{4}$
+\vfill
+\part $g(t)=\frac{(x^{2}+1)(x^{3}+2)}{x^{5}}$
+\vfill
+\part $f(x)=(x^{3}+2x+e^{x})\left(\frac{x-1}{\sqrt{x}}\right)$\\
+\begin{align*}
+h^{\prime}(x) & = [x^{3}+2x+e^{x}]^{\prime}\cdot \left(\frac{x-1}{\sqrt{x}}\right)+ (x^{3}+2x+e^{x})\left(\frac{x-1}{\sqrt{x}}\right)^{\prime}\\
+& = (3x^{2}+2+e^{x})\cdot \left(\frac{x-1}{\sqrt{x}}\right)+(x^{3}+2x+e^{x})\frac{(x-1)^{\prime}\sqrt{x}-(x-1)(\sqrt{x})^{\prime}}{(\sqrt{x})^{2}}\\
+& = (3x^{2}+2+e^{x})\cdot \left(\frac{x-1}{\sqrt{x}}\right)+(x^{3}+2x+e^{x})\frac{\sqrt{x}-(x-1)\frac{1}{2}x^{-\frac{1}{2}}}{x}
+\end{align*}
+\end{parts}
+
+
+\newpage
+
+\item
+Product Rule for Products of Three Factors:
+\begin{parts}
+\part Find $\frac{d}{dx}[f(x)g(x)h(x)]$
+\vfill
+\part Use exericse (a) to find an expression for $\frac{d}{dx}([f(x)]^{3})$
+\vfill
+\end{parts}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-----New Page-----%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+%\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-----New Page-----%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\item Differentiate the following functions
+\begin{parts}
+\part $f(x)=\sin^{2}{(x)}\csc^{2}{(x)}$
+\vfill
+\part $f(x)=x^{2}\sec{(x)}+3\cos{(x)}$
+\vfill
+\part $R(w)=\frac{\cos{(w)}}{1-\sin{(w)}}$. 
+\vfill
+\part $f(x)=\sqrt{x}\ln{(x)}$
+\vfill
+\part $f(x)=\frac{\ln{(x)}}{1+\ln{(x)}}$
+\vfill
+\part $y(\theta)=e^{\sec{(2\theta)}}$. 
+\vfill
+\end{parts}
+
+
+\newpage
+
+\item
+Use your knowledge of the derivatives of $\sin{(x)}$ and $\cos{(x)}$ to prove
+\begin{parts}
+\part $\frac{d}{dx}[\sin^{-1}{(x)}]=\frac{1}{\sqrt{1-x^{2}}}$\\
+Let $y=\sin^{-1}{(x)}$, then $\sin{(y)}=\sin{(\sin^{-1}{(x)})}=x$. Then take derivative on both side of equation.\\
+\begin{align*}
+[\sin{(y)}]^{\prime}&=[x]^{\prime}\\
+\cos{(y)}y^{\prime}&=1\\
+y^{\prime}&=\frac{1}{\cos{(y)}}
+\end{align*}
+Since $\sin^{2}{(y)}+\cos^{2}{(y)}=1 \Rightarrow \cos^{2}{(y)}=1-\sin^{2}{(y)} \Rightarrow \cos{(y)}=\sqrt{1-\sin^{2}{(y)}} \Rightarrow \cos{(y)}=\sqrt{1-x^{2}}$\\
+Thus, $\frac{d}{dx}[\sin^{-1}{(x)}]=\frac{1}{\sqrt{1-x^{2}}}$
+\part $\frac{d}{dx}[\log_{a}{(x)}]=\frac{1}{x\ln{(a)}}$\\
+Let $y=\log_{a}{(x)}$, then $a^{y}=a^{\log_{a}{(x)}}=x$ , Then take derivative on both side of equation.\\
+\begin{align*}
+[a^{y}]^{\prime}& = [x]^{\prime}\\
+a^{y}\ln{(a)}y^{\prime}   & = 1\\
+y^{\prime} & = \frac{1}{a^{y}\ln{(a)}}\\
+y^{\prime} & = \frac{1}{x\ln{(a)}}
+\end{align*}
+\end{parts}
+
+\item
+Let $f(x)=x^{3}-\frac{5}{2}x^{2}-2x+1$, and let Point $P$ be at $\left(1, f(1)\right)$
+\begin{parts}
+\part Find the points on the graph of $y = f (x)$ at which the tangent line is horizontal.\\
+Step 1: Find first derivative and then set it equal to 0\\
+Let $f^{\prime}(x) = 3x^{2}-5x-2=0$
+\begin{align*}
+3x^{2}-5x-2 &=0\\
+(x-2)(3x+1) & = 0\\
+x & = 2, -\frac{1}{3}
+\end{align*}
+the tangent line is horizontal as $x=2$ or $x=-\frac{1}{3}$
+\part Find an equation of the $\bf{tangent }$ line to the graph of $f$ at Point $P$.\\
+We will apply point slope form ($y-y_{1}=m(x-x_{1})$) to find an equation of the tangent line\\
+Step 1: Find slope of tangent line (first derivative and evaluate at $x=1$)\\
+Let $f^{\prime}(x) = 3x^{2}-5x-2$, then $m=f^{\prime}(x)|_{x=1}=3(1)^2-5(1)-2=-4$\\
+the Point: $\left(1, f(1)\right)$, then $x_{1}=1, y_{1}=f(1)$\\
+Thus the equation of tangent line is $y-f(1)=-4(x-1)$
+\end{parts}
+
+
+\newpage
+\item Find an equation of the tangent line to the given curve at the specified point.
+\begin{parts}
+\part $y=x^{2}+\frac{e^{x}}{x^{2}+1}$ at the point $x=3$
+\vfill
+\part $y=2xe^{x}$ at the point $x=0$
+\vfill
+\end{parts}
+
+
+
+
+
+\item Let $f(x)=(3x-1)e^{x}$. For which $x$ is the slope of the tangent line to $f$ positive? Negative? Zero?
+\vfill
+
+\item Suppose that $f(2)=3, g(2)=2, f^{\prime}(2)=-2$ and $g^{\prime}(2)=4$. For the following functions, find $h^{\prime}(2)$
+\begin{parts}
+\part $h(x)=5f(x)+2g(x)$
+\vfill
+\part $h(x)=f(x)g(x)$
+\vfill
+\part $h(x)=\frac{f(x)}{g(x)}$
+\vfill
+\part $h(x)=\frac{g(x)}{1+f(x)}$
+\vfill
+\end{parts}
+
+\newpage
+\item Use implicit differentiation to find the derivative: 
+\begin{parts}
+\part Given $x^{2}+y^{2}=8$.  Find $\frac{dy}{dx}$ or $y^{\prime}$
+\begin{align*}
+[x^{2}]^{\prime}+[y^{2}]^{\prime} &=[1]^{\prime}\\
+ 2x+2yy^{\prime} &= 0\\
+2yy^{\prime} &= -2x\\
+y^{\prime} &= -\frac{2x}{2y}=-\frac{x}{y}
+\end{align*}
+
+\part Given $3x^{2}y+2xy^{3}=1$.  Find $\frac{dy}{dx}$ or $y^{\prime}$
+\begin{align*}
+[3x^{2}y]^{\prime}+[2xy^{3}]^{\prime} &=[1]^{\prime}\\
+ 6xy+3x^{2}y^{\prime}+2y^{3}+2x3y^{2}y^{\prime} &= 0\\
+y^{\prime}[3x^{2}+6xy^{2}] &= -6xy-2y^{3}\\
+y^{\prime} &= \frac{-6xy-2y^{3}}{3x^{2}+6xy^{2}}
+\end{align*}
+
+\part Given $\cos{(y)}+e^{y}=xy+3x^{2}$.  Find $\frac{dy}{dx}$ or $y^{\prime}$
+\begin{align*}
+[\cos{(y)}]^{\prime}+[e^{y}]^{\prime} &=[xy]^{\prime}+[3x^{2}]^{\prime}\\
+ -\sin{(y)}y^{\prime}+ e^{y}y^{\prime} &= y+xy^{\prime}+6x\\
+y^{\prime}[-\sin{(y)}+e^{y}-x] &= y+6x\\
+y^{\prime} &= \frac{y+6x}{-\sin{(y)}+e^{y}-x}
+\end{align*}
+
+\part $\ln{(xy)}=\cos{(y^{4})}$. Find $\frac{dy}{dx}$ or $y^{\prime}$
+\begin{align*}
+[\ln{(xy)}]^{\prime} &=[\cos{(y^{4})}]^{\prime}\\
+ \frac{1}{xy}[y+xy^{\prime}] &= -\sin{(y^{4}))}\cdot 4y^{3}\cdot y^{\prime}\\
+\frac{1}{x}+\frac{1}{y}y^{\prime} &= -4y^{3}\sin{(y^{4}))}y^{\prime}\\
+y^{\prime}[\frac{1}{y}+4y^{3}\sin{(y^{4}))}] &= -\frac{1}{x}\\
+y^{\prime} &= -\frac{\frac{1}{x}}{\frac{1}{y}+4y^{3}\sin{(y^{4}))}}
+\end{align*}
+
+\part $x^{\frac{2}{3}}+y^{\frac{2}{3}}=\pi^{\frac{2}{3}}$. Find $\frac{dy}{dx}$ or $y^{\prime}$
+\begin{align*}
+[x^{\frac{2}{3}}]^{\prime}+[y^{\frac{2}{3}}]^{\prime} &=[\pi^{\frac{2}{3}}]^{\prime}\\
+ \frac{2}{3}x^{-\frac{1}{3}}+\frac{2}{3}y^{-\frac{1}{3}}y^{\prime} &= 0\\
+ \frac{2}{3}y^{-\frac{1}{3}}y^{\prime} &= \frac{2}{3}x^{-\frac{1}{3}}\\
+y^{\prime} &= \frac{\frac{2}{3}x^{-\frac{1}{3}}}{\frac{2}{3}y^{-\frac{1}{3}}}=\sqrt[3]{\frac{y}{x}}
+\end{align*}
+
+\part $\sin{(xy)}=\ln{\left(\frac{x}{y}\right)}$. Find $\frac{dy}{dx}$ or $y^{\prime}$
+\begin{align*}
+[\sin{(xy)}]^{\prime} &=[\ln{\left(\frac{x}{y}\right)}]^{\prime}\\
+ \cos{(xy)}[y+xy^{\prime}] &= \frac{y}{x}\frac{y-xy^{\prime}}{y^{2}}\\
+y\cos{(xy)}+x\cos{(xy)}y^{\prime} &= \frac{y}{x}\left(\frac{1}{y}-\frac{xy^{\prime}}{y^{2}}\right)\\
+y\cos{(xy)}+x\cos{(xy)}y^{\prime} &= \frac{1}{x}-\frac{1}{y}y^{\prime}\\
+y^{\prime}\left(x\cos{(xy)}+\frac{1}{y}\right) &= \frac{1}{x}-y\cos{(xy)}\\
+y^{\prime}&= \frac{\frac{1}{x}-y\cos{(xy)}}{x\cos{(xy)}+\frac{1}{y}}
+\end{align*}
+
+\part $\sin{(x+y)} = y^{2}\cos{x}$ . Find $\frac{dy}{dx}$ or $y^{\prime}$
+\begin{align*}
+[\sin{(x+y)}]^{\prime} &=[y^{2}\cos{x}]^{\prime}\\
+ \cos{(x+y)}[1+y^{\prime}] &= 2yy^{\prime}\cos{(x)}-y^{2}\sin{x}\\
+\cos{(x+y)}+\cos{(x+y)}y^{\prime} &=2yy^{\prime}\cos{(x)}-y^{2}\sin{x}\\
+y^{\prime}[\cos{(x+y)}-2y\cos{(x)}]&=-y^{2}\sin{x}-\cos{(x+y)}\\
+y^{\prime}&= \frac{-y^{2}\sin{x}-\cos{(x+y)}}{\cos{(x+y)}-2y\cos{(x)}}
+\end{align*}
+\end{parts}
+
+
+\item Suppose $f$ and $g$ are differentiable functions so that $f(2)=3, f^{\prime}(2)=-1, g(2)=\frac{1}{4}$, and $g^{\prime}(2)=2$. Find each of the following:
+\begin{parts} 
+\part $h^{\prime}(2)$ where $h(x)=\sqrt{[f(x)]^{2}+7}$\\
+Let $u=[f(x)]^{2}+7$, then $h(u)=\sqrt{u}$. Take derivatives, we have $\frac{dh}{du}=\frac{1}{2}u^{-\frac{1}{2}}$ and $\frac{du}{dx}= 2f(x)f^{\prime}(x)$\\
+\begin{align*}
+\frac{dh}{dx} &=\frac{dh}{du}\cdot\frac{du}{dx}=\frac{1}{2}u^{-\frac{1}{2}}\cdot2f(x)f^{\prime}(x)\\
+              &=\frac{dh}{du}\cdot\frac{du}{dx}=\frac{1}{2}[[f(x)]^{2}+7]^{-\frac{1}{2}}\cdot2f(x)f^{\prime}(x)=h^{\prime}(x)
+\end{align*}
+Then $h^{\prime}(2)=[[f(2)]^{2}+7]^{-\frac{1}{2}}\cdot f(2)f^{\prime}(2)=(3^{2}+7)^{-\frac{1}{2}}\cdot 3\cdot(-1)=-\frac{3}{4}$
+\part $l^{\prime}(2)$ where $l(x)=f(x^{3}\cdot g(x))$\\
+Let $u=x^{3}\cdot g(x)$, then $l(u)=f(u)$. Take derivatives, we have $\frac{dl}{du}=\frac{df}{du}=f^{\prime}(u)$ and $\frac{du}{dx}=3x^{2}g(x)+x^{3}g^{\prime}(x)$\\
+\begin{align*}
+\frac{dl}{dx} &=\frac{dl}{du}\cdot\frac{du}{dx}=f^{\prime}(u)\cdot [3x^{2}g(x)+x^{3}g^{\prime}(x)]\\
+              &=f^{\prime}(x^{3}\cdot g(x))\cdot [3x^{2}g(x)+x^{3}g^{\prime}(x)]=l^{\prime}(x)
+\end{align*}
+then 
+\begin{align*}
+l^{\prime}(2) &=f^{\prime}(2^{3}\cdot g(2))\cdot [3\cdot 2^{2}g(2)+2^{3}g^{\prime}(2)]\\
+              &=f^{\prime}(2)\cdot [3+16]=-19
+\end{align*}
+\end{parts}
+
+
+
+
+
+
+\end{enumerate}
+\end{document}
+

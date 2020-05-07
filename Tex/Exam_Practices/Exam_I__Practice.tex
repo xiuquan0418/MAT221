@@ -1,0 +1,341 @@
+\documentclass{exam}
+\usepackage{amsmath,enumerate,tikz,xcolor,geometry}
+\pagestyle{empty}
+\textwidth16cm
+\textheight23cm
+\oddsidemargin0pt
+\topmargin-50pt
+\def\R{\rule[-1ex]{0ex}{3.5ex}}
+\def\ans#1{\hfill \textcolor{lightgray}{#1}}
+
+\begin{document}
+\noindent
+Tougaloo College\hfill MATH 221 \\
+Calculus I \hfill 
+\begin{center}
+{\bf Practice Test 1}
+\end{center}
+
+\medskip
+\noindent
+Name:\underline{\hspace{3in}} \hfill Score:\underline{\hspace{0.8in}}
+
+\medskip
+\begin{enumerate}
+\item
+Assuming $f(x)=x^{2}$, evaluate 
+$\frac{f(x+h)-f(x)}{h}$
+\vfill
+
+%\item
+%If $f(x)=x^{3}-2x+1$,  then $f$ is the function $f$ even, odd, or neither?%\ans{(sec. 1.6 \#40)}
+%
+%\vfill
+
+\item Let $f(x) = 2+ \frac{1}{x+3}.$ Determine the inverse function of $f$, which we write as $f^{-1}$.
+\vfill
+
+
+
+\item
+Find the domain of the following function
+\begin{parts}
+\part $f(x)=\frac{2x+1}{x^{2}+x-2}$%
+\vfill
+\part $g(x)=\sqrt{3x-5}$
+\vfill
+\part $h(x)=\frac{\sqrt{2x^{2}+1}}{3x-5}$
+\vfill
+\end{parts}
+
+\newpage
+\item
+Given 
+$  f(x)=\left\{
+\begin{array}{ll}
+      1-x^{2},& x\leq 0\\
+      2x+1,   & x>0 \\
+\end{array} 
+\right. $
+\begin{parts}
+\part Evaluate $f(-2)$ and $f(1)$%
+\vfill
+\part Sketch the graph of the function $f(x)$%
+\vfill
+\end{parts}
+
+\item
+If $f(x)=x^{2}+2x-1$ and $g(x)=2x-3$, find and simplify $\left[f\circ g\right](x)$ and $\left[g\circ f\right](x)$
+
+\vfill
+
+
+
+
+\newpage
+%\item
+%let $f(u)=u^{2}+\frac{1}{u+1}$, and $g(x)=x^{4}+x^{2}$. Find $\left(f\circ g\right)(x)$ and Dom$\left(f\circ g\right)$%\ans{(sec. 1.6 \#40)}
+%
+%\vfill
+
+\item
+Find the value of the limit, and, when applicable, indicate the limit theorems being used.  %\ans{(sec. 0.8 \#15)}
+
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+ \lim_{x\to3} (2x^{2}-4x+5)
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+ \lim_{x\to 3} \frac{2x^{2}-5x-3}{x-3}
+\end{equation*}
+\end{minipage}
+
+
+
+\vfill
+
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+ \lim_{x\to 2} \frac{x^{4}-16}{x-2}
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+\lim_{x\to 4} \frac{\sqrt{x}-2}{x-4}
+\end{equation*}
+\end{minipage}
+\vfill
+
+
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+ \lim_{x\to0} \frac{\sqrt{x+2}-\sqrt{2}}{x}
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+ \lim_{x\to0} \frac{1-\cos{x}}{\sin{x}}
+\end{equation*}
+\end{minipage}
+\vfill
+
+
+\newpage
+
+
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+ \lim_{x\to 3} \frac{\frac{1}{x^{2}}-\frac{1}{9}}{x-3}
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+\lim_{x\to \frac{1}{2}} \frac{x^{-1}-2}{x-\frac{1}{2}}
+\end{equation*}
+\end{minipage}
+\vfill
+
+
+
+
+
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+ \lim_{x\to \infty} \frac{2x^{4}-x+1}{5x^{4}+x^3}
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+\lim_{x\to \infty} \sin{x}
+\end{equation*}
+\end{minipage}
+\vfill
+
+
+
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+ \lim_{x\to 0^{-}} e^{\frac{1}{x}}
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+ \lim_{h\to 0} \frac{(4+h)^{2}-16}{h} 
+\end{equation*}
+\end{minipage}
+\vfill
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-----New Page-----%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\item
+Given that $\lim_{x\to c} f(x)=-3$, $\lim_{x\to c} g(x)=0$ and $\lim_{x\to c} h(x)=8$, find the following limit. If the limit does not exist, write $\bf{DNE}$ . 
+\\
+\\
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+a).  \lim_{x\to c} (f(x)+h(x))
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+b).  \lim_{x\to c} \frac{2f(x)}{h(x)-f(x)}
+\end{equation*}
+\end{minipage}
+\\
+\\
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+c).  \lim_{x\to c} \frac{f(x)}{g(x)}
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{equation*}
+d).  \lim_{x\to c} \frac{g(x)}{f(x)}
+\end{equation*}
+\end{minipage}
+\vfill
+
+
+
+
+
+
+
+
+\item
+Let 
+\[
+f(x)=\frac{x^{2}-9}{|x-3|}
+\]
+
+Find each limit (if it exists).
+
+\begin{minipage}{.3\linewidth}
+\begin{equation*}
+ \lim_{x\to 3^{-}}f(x),
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.3\linewidth}
+\begin{equation*}
+ \lim_{x\to 3^{+}}f(x),
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.3\linewidth}
+\begin{equation*}
+ \lim_{x\to 3}f(x)
+\end{equation*}
+\end{minipage}
+
+\vfill
+\vfill
+
+\item
+Let 
+\[   f(x)=\left\{
+\begin{array}{ll}
+      x+2, & x\leq -1 \\
+      x^{2}-1,& -1\leq x < 2\\
+      \sqrt{x+1},   & x>2 \\
+\end{array} 
+\right. \]
+
+Find each limit (if it exists).
+
+\begin{minipage}{.3\linewidth}
+\begin{equation*}
+ \lim_{x\to -1^{-}}f(x),
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.3\linewidth}
+\begin{equation*}
+ \lim_{x\to -1^{+}}f(x),
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.3\linewidth}
+\begin{equation*}
+ \lim_{x\to -1}f(x)
+\end{equation*}
+\end{minipage}
+
+
+\vfill
+
+\begin{minipage}{.3\linewidth}
+\begin{equation*}
+ \lim_{x\to 2^{-}}f(x),
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.2\linewidth}
+\begin{equation*}
+ \lim_{x\to 2^{+}}f(x),
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.2\linewidth}
+\begin{equation*}
+ \lim_{x\to 2}f(x)
+\end{equation*}
+\end{minipage}
+\begin{minipage}{.2\linewidth}
+\begin{equation*}
+ \lim_{x\to 3}f(x)
+\end{equation*}
+\end{minipage}
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-----New Page-----%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+
+\vfill
+
+\item
+Given
+$f(x)=\left\{
+\begin{array}{ll}
+      cx^{2}, & x < 1 \\
+      4     , & x = 1 \\
+      -x^{3}+mx,   & x > 1 \\
+\end{array} 
+\right.$.\\
+Find the value $c$ and $m$, so that the function is continuous at $x=1$
+\vfill
+
+\item
+use the Squeeze Theorem to find the following limit
+\begin{parts}
+\part If $1\leq f(x)\leq x^{2}+2x+2$, find  $\lim_{x\to -1} f(x)$
+\vfill
+\part Given $g(x)=x^{2}\sin{\frac{1}{x}}$, find $\lim_{x\to 0}g(x)$
+\vfill
+\end{parts}
+
+
+
+\newpage
+
+
+\item
+Prove that $x^{2}+x-1=11$ has a solution on $[0, 5]$.
+\vfill
+
+%\item Use the definition of the limit to prove the following limit. 
+%\[
+%\lim_{x\to 2}(5x-4)=6
+%\]
+%\vfill
+
+
+\end{enumerate}
+\end{document}
+

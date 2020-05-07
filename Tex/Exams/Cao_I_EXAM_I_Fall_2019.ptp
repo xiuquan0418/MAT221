@@ -1,0 +1,13 @@
+# PCTeX Project File, Version 1.1
+	name: Cao_I_EXAM_I_Fall_2019
+	texformat: latex
+	typesetmode: DVI
+	spellwordlist: american
+Cao_I_EXAM_I_Fall_2019.tex
+Cao_I_EXAM_I_Fall_2019.log
+Cao_I_EXAM_I_Fall_2019.aux
+Cao_I_EXAM_I_Fall_2019.DVI
+	wndpos: 1 -1 -1 -9 -36 240 240 1860 868
+	zorder: 0
+	view: 0 -2
+Cao_I_EXAM_I_Fall_2019.pdf

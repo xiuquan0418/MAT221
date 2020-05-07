@@ -1,0 +1,982 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     44152,        974]
+NotebookOptionsPosition[     43054,        946]
+NotebookOutlinePosition[     43468,        962]
+CellTagsIndexPosition[     43425,        959]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Interactive Demonstration of the Difference Quotient", "Title",
+ CellChangeTimes->{{3.456489611203125*^9, 
+  3.4564896315*^9}},ExpressionUUID->"ca15cd44-1a9c-4b6a-bca6-e712a5dba5e8"],
+
+Cell[CellGroupData[{
+
+Cell["Created: July 2009 (David Woods)", "Section",
+ CellChangeTimes->{
+  3.458994239203125*^9, {3.459735979340955*^9, 
+   3.459735994306695*^9}},ExpressionUUID->"9309e2e8-0454-4140-8280-\
+4ad4a4012e55"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   RowBox[{
+   "This", " ", "notebook", " ", "graphically", " ", "demonstrates", " ", 
+    "the", " ", "calculation", " ", "of", " ", "the", " ", "difference", " ", 
+    "quotient", " ", "of", " ", "a", " ", "user", " ", "defined", " ", 
+    RowBox[{"function", ".", " ", "The"}], " ", "function", " ", "is", " ", 
+    "typed", " ", "in", " ", "by", " ", "the", " ", "user", " ", "and", " ", 
+    "must", " ", "be", " ", "done", " ", "using", " ", "proper", " ", 
+    StyleBox["Mathematica",
+     FontSlant->"Italic"], " ", 
+    RowBox[{"syntax", ".", " ", "After"}], " ", "typing", " ", "in", " ", 
+    "your", " ", "function", " ", "be", " ", "sure", " ", "to", " ", "click", 
+    " ", "\"\<Ok\>\"", " ", "or", " ", "hit", " ", "the", " ", 
+    "\"\<Enter\>\"", " ", "key", " ", "on", " ", "the", " ", "main", " ", 
+    RowBox[{"keyboard", ".", " ", "Do"}], " ", "not", " ", "hit", " ", "the", 
+    " ", "\"\<Enter\>\"", " ", "key", " ", "on", " ", "the", " ", "numeric", 
+    " ", 
+    RowBox[{"keypad", ".", " ", "The"}], " ", "default", " ", "function", " ",
+     "is", " ", 
+    RowBox[{
+     RowBox[{"Sin", "[", "x", "]"}], ".", " ", "\n", "\n", "The"}], " ", 
+    "starting", " ", "\"\<x\>\"", " ", "value", " ", 
+    RowBox[{"(", 
+     RowBox[{"aka", " ", "\"\<a\>\""}], ")"}], " ", "and", " ", "the", " ", 
+    "value", " ", "of", " ", "\"\<h\>\"", "  ", "can", " ", "be", " ", 
+    "chosen", " ", "using", " ", "the", " ", "sliders", " ", "or", " ", 
+    "typed", " ", "in", " ", "at", " ", "the", " ", "right", " ", "of", " ", 
+    "each", " ", 
+    RowBox[{"slider", ".", " ", "Again"}]}], ",", " ", 
+   RowBox[{
+   "do", " ", "not", " ", "hit", " ", "the", " ", "\"\<Enter\>\"", " ", "key",
+     " ", "on", " ", "the", " ", "numeric", " ", "keypad", " ", "when", " ", 
+    "manually", " ", "entering", " ", "these", " ", 
+    RowBox[{"values", ".", "\n", "\n", "Only"}], " ", "use", " ", "the", " ", 
+    "\"\<Enter\>\"", " ", "key", " ", "on", " ", "the", " ", "numeric", " ", 
+    "keypad", " ", "if", " ", "you", " ", "want", " ", "to", " ", "initiate", 
+    " ", "changes", " ", "that", " ", "you", " ", "have", " ", "made", " ", 
+    "to", " ", "the", " ", "notebook", " ", "code", " ", 
+    RowBox[{"itself", ".", "  ", "If"}], " ", "you", " ", "decide", " ", "to",
+     " ", "make", " ", "changes", " ", "to", " ", "the", " ", "code", " ", 
+    "below"}], ",", "  ", 
+   RowBox[{
+   "it", " ", "would", " ", "be", " ", "a", " ", "good", " ", "idea", " ", 
+    "make", " ", "a", " ", "backup", " ", "copy", " ", "of", " ", "the", " ", 
+    "original", " ", "code", " ", 
+    RowBox[{"first", ".", "\n", "\n", "If"}], " ", "you", " ", "do", " ", 
+    "not", " ", "want", " ", "to", " ", "display", " ", "the", " ", "code", 
+    " ", "during", " ", "a", " ", "classroom", " ", "demonstration", " ", 
+    "you", " ", "can", " ", "select", " ", "and", " ", "copy", " ", "the", 
+    " ", "output", " ", 
+    RowBox[{"panel", ".", " ", "Then"}], " ", "open", " ", "new", " ", 
+    "temporary", " ", "notebook", " ", "and", " ", "paste", " ", "the", " ", 
+    "output", " ", "panel", " ", "into", " ", 
+    RowBox[{"it", ".", "\n", "\n", "The"}], " ", "controls", " ", "are", " ", 
+    "fairly", " ", 
+    RowBox[{"straightforward", ".", " ", "Just"}], " ", "play", " ", "around",
+     " ", "with", " ", "them", " ", "and", " ", "you", " ", "should", " ", 
+    "get", " ", "the", " ", 
+    RowBox[{"idea", ".", " ", "If"}], " ", "you", " ", "have", " ", "any", 
+    " ", "questions", " ", "feel", " ", "free", " ", "to", " ", "contact", 
+    " ", "Dave", " ", "Woods", " ", 
+    RowBox[{"at", ":", " ", 
+     RowBox[{
+      RowBox[{"dwoods1", "@", "austincc"}], ".", "edu", " "}]}]}]}], 
+  "Subsection"]], "Input",ExpressionUUID->"73c373ec-7ea3-45fa-a9bb-\
+206a3bdca84b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Main Code", "Section",
+ CellChangeTimes->{{3.458993949953125*^9, 
+  3.458993952453125*^9}},ExpressionUUID->"03d25358-e703-4f33-9a12-\
+002c2518006f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "This", " ", "section", " ", "makes", " ", "some", " ", "basic", " ", 
+    "definitions", " ", "and", " ", "calculations"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"y0", "=", 
+     RowBox[{"function", "/.", 
+      RowBox[{"x", "\[Rule]", "x0"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"y", "=", 
+     RowBox[{"function", "/.", 
+      RowBox[{"x", "\[Rule]", 
+       RowBox[{"(", 
+        RowBox[{"x0", "+", "h"}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"derivative", "=", 
+     RowBox[{
+      SubscriptBox["\[PartialD]", "x"], 
+      RowBox[{"(", "function", ")"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"h", "=", 
+     RowBox[{"h1", "+", "hfine"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Abs", "[", "h", "]"}], ">", ".00000001"}], ",", 
+      RowBox[{"m", "=", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"y", "-", "y0"}], ")"}], "/", "h"}]}], ",", 
+      RowBox[{"m", "=", 
+       RowBox[{"(", 
+        RowBox[{"derivative", "/.", 
+         RowBox[{"x", "\[Rule]", "x0"}]}], ")"}]}]}], "]"}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+     "This", " ", "section", " ", "creates", " ", "the", " ", "graphics", " ",
+       "objects"}], " ", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"functlabel", "=", 
+     RowBox[{"Text", "@", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<f\>\"", ",", "Italic"}], "]"}], ",", "\"\<(\>\"", 
+           ",", 
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<x\>\"", ",", "Italic"}], "]"}], ",", "\"\<) = \>\"", 
+           ",", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"function", ",", "TraditionalForm"}], "]"}], ",", 
+           "\"\<,   \>\""}], "}"}], "]"}], ",", "22", ",", "Blue"}], 
+       "]"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"x0label", "=", 
+     RowBox[{"Text", "@", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<a\>\"", ",", "Italic"}], "]"}], ",", "\"\< = \>\"", 
+           ",", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"x0", ",", "TraditionalForm"}], "]"}], ",", 
+           "\"\< ,   \>\""}], "}"}], "]"}], ",", "20", ",", "Blue"}], 
+       "]"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"hlabel", "=", 
+     RowBox[{"Text", "@", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<h\>\"", ",", "Italic"}], "]"}], ",", "\"\< = \>\"", 
+           ",", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"h", ",", "TraditionalForm"}], "]"}], ",", 
+           "\"\< ,   \>\""}], "}"}], "]"}], ",", "20", ",", "Blue"}], 
+       "]"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"diffquot", "=", "m"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"dqlabel", "=", 
+     RowBox[{"Text", "@", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{
+            "\"\<\!\(\*FractionBox[\(f \((x + h)\) - f \((x)\)\), \
+\(h\)]\)\>\"", ",", "Italic"}], "]"}], ",", "\"\< = \>\"", ",", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"diffquot", ",", "TraditionalForm"}], "]"}], ",", 
+           "\"\< ,   \>\""}], "}"}], "]"}], ",", "20", ",", "Blue"}], 
+       "]"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"showderiv", "==", "True"}], ",", 
+      RowBox[{"deriv", "=", 
+       RowBox[{"Text", "@", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"Row", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<f'(x)= \>\"", ",", "Italic"}], "]"}], ",", 
+             RowBox[{"(", 
+              RowBox[{"derivative", "/.", 
+               RowBox[{"x", "\[Rule]", "x0"}]}], ")"}]}], "}"}], "]"}], ",", 
+          "20", ",", "Blue"}], "]"}]}]}], ",", 
+      RowBox[{"deriv", "=", "Null"}]}], "]"}], ";", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"point1", "=", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"PointSize", "[", ".014", "]"}], ",", "Black", ",", 
+        RowBox[{"Point", "[", 
+         RowBox[{"{", 
+          RowBox[{"x0", ",", 
+           RowBox[{"function", "/.", 
+            RowBox[{"x", "\[Rule]", "x0"}]}]}], "}"}], "]"}]}], "}"}], 
+      "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"point2", "=", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"PointSize", "[", ".014", "]"}], ",", "Black", ",", 
+        RowBox[{"Point", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x0", "+", "h"}], ",", 
+           RowBox[{"function", "/.", 
+            RowBox[{"x", "\[Rule]", 
+             RowBox[{"(", 
+              RowBox[{"x0", "+", "h"}], ")"}]}]}]}], "}"}], "]"}]}], "}"}], 
+      "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"fplot", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{"function", ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{"a", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "+", 
+          RowBox[{"b", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+         RowBox[{
+          RowBox[{"a", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "+", 
+          RowBox[{"b", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"a", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], "+", 
+           RowBox[{"b", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+          RowBox[{
+           RowBox[{"a", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "+", 
+           RowBox[{"b", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"Thickness", "[", ".005", "]"}], "}"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "Full"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"secline", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"y0", "+", 
+        RowBox[{"m", 
+         RowBox[{"(", 
+          RowBox[{"x1", "-", "x0"}], ")"}]}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x1", ",", 
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{"a", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "+", 
+          RowBox[{"b", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+         RowBox[{
+          RowBox[{"a", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "+", 
+          RowBox[{"b", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"a", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], "+", 
+           RowBox[{"b", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+          RowBox[{
+           RowBox[{"a", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "+", 
+           RowBox[{"b", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Thickness", "[", ".004", "]"}], ",", "Red"}], "}"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "Full"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"showtangent", "\[Equal]", "True"}], ",", " ", 
+      RowBox[{"tanline", "=", 
+       RowBox[{"Plot", "[", 
+        RowBox[{
+         RowBox[{"y0", "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"derivative", "/.", 
+             RowBox[{"x", "\[Rule]", "x0"}]}], ")"}], "*", 
+           RowBox[{"(", 
+            RowBox[{"x1", "-", "x0"}], ")"}]}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x1", ",", 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"a", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "+", 
+            RowBox[{"b", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"a", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "+", 
+            RowBox[{"b", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"a", "[", 
+               RowBox[{"[", "2", "]"}], "]"}]}], "+", 
+             RowBox[{"b", "[", 
+              RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"a", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "+", 
+             RowBox[{"b", "[", 
+              RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], ",", 
+         RowBox[{"PlotStyle", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Thickness", "[", ".004", "]"}], ",", "Green"}], "}"}]}], 
+         ",", 
+         RowBox[{"ImageSize", "\[Rule]", "600"}]}], "]"}]}], ",", 
+      RowBox[{"tanline", "=", 
+       RowBox[{"Plot", "[", 
+        RowBox[{"10000", ",", 
+         RowBox[{"{", 
+          RowBox[{"x1", ",", 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"a", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "+", 
+            RowBox[{"b", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"a", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "+", 
+            RowBox[{"b", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"a", "[", 
+               RowBox[{"[", "2", "]"}], "]"}]}], "+", 
+             RowBox[{"b", "[", 
+              RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"a", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "+", 
+             RowBox[{"b", "[", 
+              RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], ",", 
+         RowBox[{"PlotStyle", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Thickness", "[", "0", "]"}], ",", "Black"}], "}"}]}], 
+         ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Full"}]}], "]"}]}]}], "]"}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+     "This", " ", "command", " ", "displays", " ", "the", " ", "graphics", 
+      " ", "objects"}], " ", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"Column", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Row", "[", 
+        RowBox[{"{", 
+         RowBox[{
+         "functlabel", ",", "x0label", ",", "hlabel", ",", "dqlabel", ",", 
+          "deriv"}], "}"}], "]"}], ",", 
+       RowBox[{"Show", "[", 
+        RowBox[{
+        "fplot", ",", "secline", ",", "tanline", ",", "point1", ",", 
+         "point2"}], "]"}]}], "\[IndentingNewLine]", "}"}], "]"}]}], ",", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "This", " ", "section", " ", "creates", " ", "and", " ", "formats", " ", 
+     "the", " ", 
+     RowBox[{"input", "/", "output"}], " ", "controls", " ", "in", " ", "the",
+      " ", "panel"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"function", ",", 
+     RowBox[{"Sin", "[", "x", "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x0", ",", "0", ",", "\"\<a value\>\""}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"ControlType", "\[Rule]", "Slider"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "700"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", "\"\<Labeled\>\"", "}"}]}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"h1", ",", "1", ",", "\"\<h value\>\""}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"ControlType", "\[Rule]", "Slider"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "700"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", 
+      RowBox[{"{", "\"\<Labeled\>\"", "}"}]}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"hfine", ",", "0", ",", "\"\<h fine tune\>\""}], "}"}], ",", 
+     RowBox[{"-", ".1"}], ",", ".1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+     RowBox[{"BaselinePosition", "\[Rule]", "Right"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"showtangent", ",", "True", ",", "\"\<Show Tangent\>\""}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"True", ",", "False"}], "}"}], ",", 
+     RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"showderiv", ",", "True", ",", "\"\<Show f'(x)\>\""}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"True", ",", "False"}], "}"}], ",", 
+     RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}], ",", "\"\<Scale\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", "2"}], ",", 
+       RowBox[{"1", "/", "2"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"10", ",", "10"}], "}"}], ",", 
+     RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"b", ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}], ",", "\"\<Shift\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "10"}], ",", 
+       RowBox[{"-", "10"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"10", ",", "10"}], "}"}], ",", 
+     RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", " ", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Center"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.456258672078125*^9, 3.456258730265625*^9, {3.456258936828125*^9, 
+   3.45625894815625*^9}, {3.456259008015625*^9, 3.456259059125*^9}, 
+   3.45625998021875*^9, {3.456260012109375*^9, 3.4562600520625*^9}, {
+   3.456260088109375*^9, 3.456260090703125*^9}, {3.456260122390625*^9, 
+   3.456260204578125*^9}, {3.456260264125*^9, 3.456260264578125*^9}, {
+   3.456260300359375*^9, 3.4562603501875*^9}, {3.45626038153125*^9, 
+   3.45626040709375*^9}, {3.456260442828125*^9, 3.456260447453125*^9}, {
+   3.456260495578125*^9, 3.45626063890625*^9}, {3.4562606694375*^9, 
+   3.456260858765625*^9}, {3.4562609158125*^9, 3.456260952703125*^9}, {
+   3.456261011421875*^9, 3.45626101796875*^9}, 3.45626105471875*^9, {
+   3.456261236171875*^9, 3.45626123734375*^9}, {3.45626127884375*^9, 
+   3.45626129959375*^9}, {3.456261368578125*^9, 3.45626141159375*^9}, {
+   3.456261472921875*^9, 3.456261487890625*^9}, 3.456261526328125*^9, {
+   3.45626174575*^9, 3.45626180965625*^9}, {3.456261896609375*^9, 
+   3.456261897609375*^9}, {3.456261952109375*^9, 3.45626197984375*^9}, {
+   3.456262015390625*^9, 3.45626203546875*^9}, {3.45626213284375*^9, 
+   3.456262212703125*^9}, {3.45626227275*^9, 3.456262286046875*^9}, {
+   3.456262320484375*^9, 3.456262341734375*^9}, {3.45626239134375*^9, 
+   3.456262406640625*^9}, {3.456262465921875*^9, 3.4562624803125*^9}, {
+   3.456262513453125*^9, 3.456262532984375*^9}, {3.456262659203125*^9, 
+   3.456262787953125*^9}, {3.456262857328125*^9, 3.456262906828125*^9}, {
+   3.45626297953125*^9, 3.456263008171875*^9}, {3.456263145609375*^9, 
+   3.45626323325*^9}, {3.456263334375*^9, 3.45626337834375*^9}, {
+   3.4562634113125*^9, 3.456263473984375*^9}, {3.4562640789375*^9, 
+   3.456264089734375*^9}, {3.45626415546875*^9, 3.456264168125*^9}, {
+   3.45626422115625*^9, 3.456264235765625*^9}, {3.456264298171875*^9, 
+   3.4562643086875*^9}, {3.45626477978125*^9, 3.456264949109375*^9}, {
+   3.456265036875*^9, 3.456265050703125*^9}, {3.456265175859375*^9, 
+   3.456265239375*^9}, {3.456265288125*^9, 3.456265341578125*^9}, {
+   3.456265383984375*^9, 3.45626539828125*^9}, {3.456265430703125*^9, 
+   3.45626545903125*^9}, {3.456265497125*^9, 3.456265503671875*^9}, {
+   3.456265585796875*^9, 3.4562655910625*^9}, {3.456265653671875*^9, 
+   3.45626569028125*^9}, {3.456265737828125*^9, 3.456265783328125*^9}, {
+   3.456265940453125*^9, 3.456265971640625*^9}, {3.45626610371875*^9, 
+   3.45626621834375*^9}, 3.4562662485*^9, {3.456266309015625*^9, 
+   3.456266331109375*^9}, {3.456266451421875*^9, 3.456266586390625*^9}, {
+   3.45626670615625*^9, 3.456266709546875*^9}, {3.456266790390625*^9, 
+   3.4562668131875*^9}, {3.456266943734375*^9, 3.4562669448125*^9}, {
+   3.456267169171875*^9, 3.4562672634375*^9}, {3.456267308265625*^9, 
+   3.456267390453125*^9}, 3.456267424296875*^9, {3.45626762090625*^9, 
+   3.456267642640625*^9}, {3.456267673546875*^9, 3.456267675765625*^9}, {
+   3.456267717*^9, 3.456267717375*^9}, {3.4562678424375*^9, 
+   3.456267910125*^9}, {3.456268044328125*^9, 3.45626804525*^9}, {
+   3.45626824659375*^9, 3.456268272859375*^9}, {3.4562684375*^9, 
+   3.456268462609375*^9}, 3.456268564578125*^9, {3.45626867878125*^9, 
+   3.456268714671875*^9}, {3.45632773971875*^9, 3.45632774003125*^9}, {
+   3.456328139890625*^9, 3.456328152171875*^9}, {3.4563281938125*^9, 
+   3.45632820196875*^9}, {3.456328471359375*^9, 3.45632847971875*^9}, {
+   3.456328522640625*^9, 3.45632858665625*^9}, {3.45632879525*^9, 
+   3.45632880234375*^9}, {3.45632883334375*^9, 3.456328833875*^9}, {
+   3.4563288804375*^9, 3.456328918859375*^9}, 3.456328956078125*^9, {
+   3.456329091765625*^9, 3.456329125609375*^9}, 3.45632917090625*^9, 
+   3.45632926703125*^9, {3.456329309453125*^9, 3.4563293250625*^9}, {
+   3.456330149359375*^9, 3.456330175453125*^9}, {3.45633171265625*^9, 
+   3.456331717796875*^9}, {3.45633185678125*^9, 3.456331885265625*^9}, {
+   3.45633201778125*^9, 3.45633205275*^9}, {3.456332338015625*^9, 
+   3.456332388828125*^9}, {3.456332444890625*^9, 3.4563324869375*^9}, {
+   3.456332536*^9, 3.456332577421875*^9}, {3.456332615140625*^9, 
+   3.456332622109375*^9}, 3.4563326763125*^9, {3.4563347489375*^9, 
+   3.456334755171875*^9}, {3.45633480471875*^9, 3.456334813625*^9}, {
+   3.456334861*^9, 3.456334915140625*^9}, {3.45633497590625*^9, 
+   3.45633512015625*^9}, {3.456335175671875*^9, 3.456335189375*^9}, {
+   3.456335219890625*^9, 3.456335227890625*^9}, {3.456335276578125*^9, 
+   3.4563353320625*^9}, {3.456335364921875*^9, 3.4563354374375*^9}, {
+   3.4563355435625*^9, 3.4563355661875*^9}, {3.4563356061875*^9, 
+   3.4563356073125*^9}, {3.456335786984375*^9, 3.45633581678125*^9}, {
+   3.45633592371875*^9, 3.456336036671875*^9}, {3.456336251046875*^9, 
+   3.45633625175*^9}, {3.4563362943125*^9, 3.456336320359375*^9}, {
+   3.456414466859375*^9, 3.456414467671875*^9}, {3.45641455121875*^9, 
+   3.456414600203125*^9}, {3.456414631*^9, 3.45641463875*^9}, {
+   3.456414674421875*^9, 3.456414712203125*^9}, {3.456414750578125*^9, 
+   3.45641475446875*^9}, {3.4564148248125*^9, 3.456414827328125*^9}, {
+   3.456414892296875*^9, 3.456414926859375*^9}, {3.456415009296875*^9, 
+   3.4564150269375*^9}, {3.456415063109375*^9, 3.4564150988125*^9}, {
+   3.456415138875*^9, 3.4564151494375*^9}, {3.456415183625*^9, 
+   3.456415323484375*^9}, {3.4564153575*^9, 3.456415440203125*^9}, {
+   3.456490458078125*^9, 3.45649057075*^9}},
+ CellLabel->
+  "In[467]:=",ExpressionUUID->"de052546-8ca7-47cc-8910-1dd590b1ddf0"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = {3, 3}, $CellContext`b$$ = {0, 
+    0}, $CellContext`function$$ = Sin[$CellContext`x], $CellContext`h1$$ = 
+    1, $CellContext`hfine$$ = 0, $CellContext`showderiv$$ = 
+    True, $CellContext`showtangent$$ = True, $CellContext`x0$$ = 0, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`function$$], 
+      Sin[$CellContext`x]}, {{
+       Hold[$CellContext`x0$$], 0, "a value"}, -10, 10}, {{
+       Hold[$CellContext`h1$$], 1, "h value"}, -10, 10}, {{
+       Hold[$CellContext`hfine$$], 0, "h fine tune"}, -0.1, 0.1}, {{
+       Hold[$CellContext`showtangent$$], True, "Show Tangent"}, {
+      True, False}}, {{
+       Hold[$CellContext`showderiv$$], True, "Show f'(x)"}, {True, False}}, {{
+       Hold[$CellContext`a$$], {3, 3}, "Scale"}, {
+       Rational[1, 2], 
+       Rational[1, 2]}, {10, 10}}, {{
+       Hold[$CellContext`b$$], {0, 0}, "Shift"}, {-10, -10}, {10, 10}}}, 
+    Typeset`size$$ = {1549., {501.5, 508.5}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`x0$293490$$ = 0, $CellContext`h1$293491$$ = 
+    0, $CellContext`hfine$293492$$ = 0, $CellContext`showtangent$293493$$ = 
+    False, $CellContext`showderiv$293494$$ = 
+    False, $CellContext`a$293495$$ = {0, 0}, $CellContext`b$293496$$ = {0, 
+    0}}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = {3, 3}, $CellContext`b$$ = {0, 
+         0}, $CellContext`function$$ = Sin[$CellContext`x], $CellContext`h1$$ = 
+        1, $CellContext`hfine$$ = 0, $CellContext`showderiv$$ = 
+        True, $CellContext`showtangent$$ = True, $CellContext`x0$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`x0$$, $CellContext`x0$293490$$, 0], 
+        Hold[$CellContext`h1$$, $CellContext`h1$293491$$, 0], 
+        Hold[$CellContext`hfine$$, $CellContext`hfine$293492$$, 0], 
+        Hold[$CellContext`showtangent$$, $CellContext`showtangent$293493$$, 
+         False], 
+        Hold[$CellContext`showderiv$$, $CellContext`showderiv$293494$$, 
+         False], 
+        Hold[$CellContext`a$$, $CellContext`a$293495$$, {0, 0}], 
+        Hold[$CellContext`b$$, $CellContext`b$293496$$, {0, 0}]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`y0 = 
+        ReplaceAll[$CellContext`function$$, $CellContext`x -> \
+$CellContext`x0$$]; $CellContext`y = 
+        ReplaceAll[$CellContext`function$$, $CellContext`x -> \
+$CellContext`x0$$ + $CellContext`h]; $CellContext`derivative = 
+        D[$CellContext`function$$, $CellContext`x]; $CellContext`h = \
+$CellContext`h1$$ + $CellContext`hfine$$; 
+       If[Abs[$CellContext`h] > 
+         1.*^-8, $CellContext`m = ($CellContext`y - \
+$CellContext`y0)/$CellContext`h, $CellContext`m = 
+         ReplaceAll[$CellContext`derivative, $CellContext`x -> \
+$CellContext`x0$$]]; $CellContext`functlabel = Text[
+          Style[
+           Row[{
+             Style["f", Italic], "(", 
+             Style["x", Italic], ") = ", 
+             ToString[$CellContext`function$$, TraditionalForm], ",   "}], 22,
+            Blue]]; $CellContext`x0label = Text[
+          Style[
+           Row[{
+             Style["a", Italic], " = ", 
+             ToString[$CellContext`x0$$, TraditionalForm], " ,   "}], 20, 
+           Blue]]; $CellContext`hlabel = Text[
+          Style[
+           Row[{
+             Style["h", Italic], " = ", 
+             ToString[$CellContext`h, TraditionalForm], " ,   "}], 20, 
+           Blue]]; $CellContext`diffquot = $CellContext`m; \
+$CellContext`dqlabel = Text[
+          Style[
+           Row[{
+             Style[
+             "\!\(\*FractionBox[\(f \((x + h)\) - f \((x)\)\), \(h\)]\)", 
+              Italic], " = ", 
+             ToString[$CellContext`diffquot, TraditionalForm], " ,   "}], 20, 
+           Blue]]; If[$CellContext`showderiv$$ == True, $CellContext`deriv = 
+         Text[
+           Style[
+            Row[{
+              Style["f'(x)= ", Italic], 
+              
+              ReplaceAll[$CellContext`derivative, $CellContext`x -> \
+$CellContext`x0$$]}], 20, Blue]], $CellContext`deriv = 
+         Null]; $CellContext`point1 = Graphics[{
+           PointSize[0.014], Black, 
+           Point[{$CellContext`x0$$, 
+             
+             ReplaceAll[$CellContext`function$$, $CellContext`x -> \
+$CellContext`x0$$]}]}]; $CellContext`point2 = Graphics[{
+           PointSize[0.014], Black, 
+           Point[{$CellContext`x0$$ + $CellContext`h, 
+             
+             ReplaceAll[$CellContext`function$$, $CellContext`x -> \
+$CellContext`x0$$ + $CellContext`h]}]}]; $CellContext`fplot = 
+        Plot[$CellContext`function$$, {$CellContext`x, -
+            Part[$CellContext`a$$, 1] + Part[$CellContext`b$$, 1], 
+           Part[$CellContext`a$$, 1] + Part[$CellContext`b$$, 1]}, 
+          PlotRange -> {-Part[$CellContext`a$$, 2] + 
+            Part[$CellContext`b$$, 2], Part[$CellContext`a$$, 2] + 
+            Part[$CellContext`b$$, 2]}, PlotStyle -> {
+            Thickness[0.005]}, ImageSize -> Full]; $CellContext`secline = 
+        Plot[$CellContext`y0 + $CellContext`m ($CellContext`x1 - \
+$CellContext`x0$$), {$CellContext`x1, -Part[$CellContext`a$$, 1] + 
+           Part[$CellContext`b$$, 1], Part[$CellContext`a$$, 1] + 
+           Part[$CellContext`b$$, 1]}, 
+          PlotRange -> {-Part[$CellContext`a$$, 2] + 
+            Part[$CellContext`b$$, 2], Part[$CellContext`a$$, 2] + 
+            Part[$CellContext`b$$, 2]}, PlotStyle -> {
+            Thickness[0.004], Red}, ImageSize -> Full]; 
+       If[$CellContext`showtangent$$ == True, $CellContext`tanline = 
+         Plot[$CellContext`y0 + 
+           ReplaceAll[$CellContext`derivative, $CellContext`x -> \
+$CellContext`x0$$] ($CellContext`x1 - $CellContext`x0$$), {$CellContext`x1, -
+             Part[$CellContext`a$$, 1] + Part[$CellContext`b$$, 1], 
+            Part[$CellContext`a$$, 1] + Part[$CellContext`b$$, 1]}, 
+           PlotRange -> {-Part[$CellContext`a$$, 2] + 
+             Part[$CellContext`b$$, 2], Part[$CellContext`a$$, 2] + 
+             Part[$CellContext`b$$, 2]}, PlotStyle -> {
+             Thickness[0.004], Green}, ImageSize -> 
+           600], $CellContext`tanline = 
+         Plot[10000, {$CellContext`x1, -Part[$CellContext`a$$, 1] + 
+            Part[$CellContext`b$$, 1], Part[$CellContext`a$$, 1] + 
+            Part[$CellContext`b$$, 1]}, 
+           PlotRange -> {-Part[$CellContext`a$$, 2] + 
+             Part[$CellContext`b$$, 2], Part[$CellContext`a$$, 2] + 
+             Part[$CellContext`b$$, 2]}, PlotStyle -> {
+             Thickness[0], Black}, ImageSize -> Full]]; Column[{
+          
+          Row[{$CellContext`functlabel, $CellContext`x0label, \
+$CellContext`hlabel, $CellContext`dqlabel, $CellContext`deriv}], 
+          
+          Show[$CellContext`fplot, $CellContext`secline, \
+$CellContext`tanline, $CellContext`point1, $CellContext`point2]}]), 
+      "Specifications" :> {{$CellContext`function$$, 
+         Sin[$CellContext`x]}, {{$CellContext`x0$$, 0, "a value"}, -10, 10, 
+         ControlType -> Slider, ImageSize -> 700, 
+         Appearance -> {"Labeled"}}, {{$CellContext`h1$$, 1, "h value"}, -10, 
+         10, ControlType -> Slider, ImageSize -> 700, 
+         Appearance -> {"Labeled"}}, {{$CellContext`hfine$$, 0, 
+          "h fine tune"}, -0.1, 0.1, ImageSize -> Medium, BaselinePosition -> 
+         Right}, {{$CellContext`showtangent$$, True, "Show Tangent"}, {
+         True, False}, ControlPlacement -> 
+         Left}, {{$CellContext`showderiv$$, True, "Show f'(x)"}, {
+         True, False}, ControlPlacement -> 
+         Left}, {{$CellContext`a$$, {3, 3}, "Scale"}, {
+          Rational[1, 2], 
+          Rational[1, 2]}, {10, 10}, ControlPlacement -> 
+         Left}, {{$CellContext`b$$, {0, 0}, "Shift"}, {-10, -10}, {10, 10}, 
+         ControlPlacement -> Left}}, 
+      "Options" :> {ControlPlacement -> Center}, "DefaultOptions" :> {}],
+     ImageSizeCache->{1764., {637., 644.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.7706609803889685`*^9},
+ CellLabel->
+  "Out[467]=",ExpressionUUID->"fd6d5ef2-6c87-4555-b9df-d858cdf3f494"]
+}, Open  ]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = {5.25, 1.735}, $CellContext`b$$ = {
+    0.5, 0.20000000000000107`}, $CellContext`function$$ = 
+    Sin[$CellContext`x], $CellContext`h1$$ = -0.17999999999999972`, \
+$CellContext`hfine$$ = 0.06, $CellContext`showderiv$$ = 
+    True, $CellContext`showtangent$$ = True, $CellContext`x0$$ = 
+    0.9199999999999999, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`function$$], 
+      Sin[$CellContext`x]}, {{
+       Hold[$CellContext`x0$$], 0, "a value"}, -10, 10}, {{
+       Hold[$CellContext`h1$$], 1, "h value"}, -10, 10}, {{
+       Hold[$CellContext`hfine$$], 0, "h fine tune"}, -0.1, 0.1}, {{
+       Hold[$CellContext`showtangent$$], True, "Show Tangent"}, {
+      True, False}}, {{
+       Hold[$CellContext`showderiv$$], True, "Show f'(x)"}, {True, False}}, {{
+       Hold[$CellContext`a$$], {3, 3}, "Scale"}, {
+       Rational[1, 2], 
+       Rational[1, 2]}, {10, 10}}, {{
+       Hold[$CellContext`b$$], {0, 0}, "Shift"}, {-10, -10}, {10, 10}}}, 
+    Typeset`size$$ = {1556., {497.5, 504.5}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, $CellContext`x0$794$$ =
+     0, $CellContext`h1$795$$ = 0, $CellContext`hfine$796$$ = 
+    0, $CellContext`showtangent$797$$ = False, $CellContext`showderiv$798$$ = 
+    False, $CellContext`a$799$$ = {0, 0}, $CellContext`b$800$$ = {0, 0}}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = {3, 3}, $CellContext`b$$ = {0, 
+         0}, $CellContext`function$$ = Sin[$CellContext`x], $CellContext`h1$$ = 
+        1, $CellContext`hfine$$ = 0, $CellContext`showderiv$$ = 
+        True, $CellContext`showtangent$$ = True, $CellContext`x0$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`x0$$, $CellContext`x0$794$$, 0], 
+        Hold[$CellContext`h1$$, $CellContext`h1$795$$, 0], 
+        Hold[$CellContext`hfine$$, $CellContext`hfine$796$$, 0], 
+        Hold[$CellContext`showtangent$$, $CellContext`showtangent$797$$, 
+         False], 
+        Hold[$CellContext`showderiv$$, $CellContext`showderiv$798$$, False], 
+        Hold[$CellContext`a$$, $CellContext`a$799$$, {0, 0}], 
+        Hold[$CellContext`b$$, $CellContext`b$800$$, {0, 0}]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`y0 = 
+        ReplaceAll[$CellContext`function$$, $CellContext`x -> \
+$CellContext`x0$$]; $CellContext`y = 
+        ReplaceAll[$CellContext`function$$, $CellContext`x -> \
+$CellContext`x0$$ + $CellContext`h]; $CellContext`derivative = 
+        D[$CellContext`function$$, $CellContext`x]; $CellContext`h = \
+$CellContext`h1$$ + $CellContext`hfine$$; 
+       If[Abs[$CellContext`h] > 
+         1.*^-8, $CellContext`m = ($CellContext`y - \
+$CellContext`y0)/$CellContext`h, $CellContext`m = 
+         ReplaceAll[$CellContext`derivative, $CellContext`x -> \
+$CellContext`x0$$]]; $CellContext`functlabel = Text[
+          Style[
+           Row[{
+             Style["f", Italic], "(", 
+             Style["x", Italic], ") = ", 
+             ToString[$CellContext`function$$, TraditionalForm], ",   "}], 22,
+            Blue]]; $CellContext`x0label = Text[
+          Style[
+           Row[{
+             Style["a", Italic], " = ", 
+             ToString[$CellContext`x0$$, TraditionalForm], " ,   "}], 20, 
+           Blue]]; $CellContext`hlabel = Text[
+          Style[
+           Row[{
+             Style["h", Italic], " = ", 
+             ToString[$CellContext`h, TraditionalForm], " ,   "}], 20, 
+           Blue]]; $CellContext`diffquot = $CellContext`m; \
+$CellContext`dqlabel = Text[
+          Style[
+           Row[{
+             Style[
+             "\!\(\*FractionBox[\(f \((x + h)\) - f \((x)\)\), \(h\)]\)", 
+              Italic], " = ", 
+             ToString[$CellContext`diffquot, TraditionalForm], " ,   "}], 20, 
+           Blue]]; If[$CellContext`showderiv$$ == True, $CellContext`deriv = 
+         Text[
+           Style[
+            Row[{
+              Style["f'(x)= ", Italic], 
+              
+              ReplaceAll[$CellContext`derivative, $CellContext`x -> \
+$CellContext`x0$$]}], 20, Blue]], $CellContext`deriv = 
+         Null]; $CellContext`point1 = Graphics[{
+           PointSize[0.014], Black, 
+           Point[{$CellContext`x0$$, 
+             
+             ReplaceAll[$CellContext`function$$, $CellContext`x -> \
+$CellContext`x0$$]}]}]; $CellContext`point2 = Graphics[{
+           PointSize[0.014], Black, 
+           Point[{$CellContext`x0$$ + $CellContext`h, 
+             
+             ReplaceAll[$CellContext`function$$, $CellContext`x -> \
+$CellContext`x0$$ + $CellContext`h]}]}]; $CellContext`fplot = 
+        Plot[$CellContext`function$$, {$CellContext`x, -
+            Part[$CellContext`a$$, 1] + Part[$CellContext`b$$, 1], 
+           Part[$CellContext`a$$, 1] + Part[$CellContext`b$$, 1]}, 
+          PlotRange -> {-Part[$CellContext`a$$, 2] + 
+            Part[$CellContext`b$$, 2], Part[$CellContext`a$$, 2] + 
+            Part[$CellContext`b$$, 2]}, PlotStyle -> {
+            Thickness[0.005]}, ImageSize -> Full]; $CellContext`secline = 
+        Plot[$CellContext`y0 + $CellContext`m ($CellContext`x1 - \
+$CellContext`x0$$), {$CellContext`x1, -Part[$CellContext`a$$, 1] + 
+           Part[$CellContext`b$$, 1], Part[$CellContext`a$$, 1] + 
+           Part[$CellContext`b$$, 1]}, 
+          PlotRange -> {-Part[$CellContext`a$$, 2] + 
+            Part[$CellContext`b$$, 2], Part[$CellContext`a$$, 2] + 
+            Part[$CellContext`b$$, 2]}, PlotStyle -> {
+            Thickness[0.004], Red}, ImageSize -> Full]; 
+       If[$CellContext`showtangent$$ == True, $CellContext`tanline = 
+         Plot[$CellContext`y0 + 
+           ReplaceAll[$CellContext`derivative, $CellContext`x -> \
+$CellContext`x0$$] ($CellContext`x1 - $CellContext`x0$$), {$CellContext`x1, -
+             Part[$CellContext`a$$, 1] + Part[$CellContext`b$$, 1], 
+            Part[$CellContext`a$$, 1] + Part[$CellContext`b$$, 1]}, 
+           PlotRange -> {-Part[$CellContext`a$$, 2] + 
+             Part[$CellContext`b$$, 2], Part[$CellContext`a$$, 2] + 
+             Part[$CellContext`b$$, 2]}, PlotStyle -> {
+             Thickness[0.004], Green}, ImageSize -> 
+           600], $CellContext`tanline = 
+         Plot[10000, {$CellContext`x1, -Part[$CellContext`a$$, 1] + 
+            Part[$CellContext`b$$, 1], Part[$CellContext`a$$, 1] + 
+            Part[$CellContext`b$$, 1]}, 
+           PlotRange -> {-Part[$CellContext`a$$, 2] + 
+             Part[$CellContext`b$$, 2], Part[$CellContext`a$$, 2] + 
+             Part[$CellContext`b$$, 2]}, PlotStyle -> {
+             Thickness[0], Black}, ImageSize -> Full]]; Column[{
+          
+          Row[{$CellContext`functlabel, $CellContext`x0label, \
+$CellContext`hlabel, $CellContext`dqlabel, $CellContext`deriv}], 
+          
+          Show[$CellContext`fplot, $CellContext`secline, \
+$CellContext`tanline, $CellContext`point1, $CellContext`point2]}]), 
+      "Specifications" :> {{$CellContext`function$$, 
+         Sin[$CellContext`x]}, {{$CellContext`x0$$, 0, "a value"}, -10, 10, 
+         ControlType -> Slider, ImageSize -> 700, 
+         Appearance -> {"Labeled"}}, {{$CellContext`h1$$, 1, "h value"}, -10, 
+         10, ControlType -> Slider, ImageSize -> 700, 
+         Appearance -> {"Labeled"}}, {{$CellContext`hfine$$, 0, 
+          "h fine tune"}, -0.1, 0.1, ImageSize -> Medium, BaselinePosition -> 
+         Right}, {{$CellContext`showtangent$$, True, "Show Tangent"}, {
+         True, False}, ControlPlacement -> 
+         Left}, {{$CellContext`showderiv$$, True, "Show f'(x)"}, {
+         True, False}, ControlPlacement -> 
+         Left}, {{$CellContext`a$$, {3, 3}, "Scale"}, {
+          Rational[1, 2], 
+          Rational[1, 2]}, {10, 10}, ControlPlacement -> 
+         Left}, {{$CellContext`b$$, {0, 0}, "Shift"}, {-10, -10}, {10, 10}, 
+         ControlPlacement -> Left}}, 
+      "Options" :> {ControlPlacement -> Center}, "DefaultOptions" :> {}],
+     ImageSizeCache->{1771., {633., 640.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Input",
+ CellChangeTimes->{
+  3.770660950951768*^9},ExpressionUUID->"fce46563-cab3-43a0-8770-\
+9b2df1131378"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 998},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->FrontEnd`FileName[{"Creative"}, "NaturalColor.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 188, 2, 65, "Title",ExpressionUUID->"ca15cd44-1a9c-4b6a-bca6-e712a5dba5e8"],
+Cell[CellGroupData[{
+Cell[780, 28, 203, 4, 75, "Section",ExpressionUUID->"9309e2e8-0454-4140-8280-4ad4a4012e55"],
+Cell[986, 34, 3820, 67, 222, "Input",ExpressionUUID->"73c373ec-7ea3-45fa-a9bb-206a3bdca84b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4843, 106, 154, 3, 75, "Section",ExpressionUUID->"03d25358-e703-4f33-9a12-002c2518006f"],
+Cell[CellGroupData[{
+Cell[5022, 113, 20222, 481, 761, "Input",ExpressionUUID->"de052546-8ca7-47cc-8910-1dd590b1ddf0"],
+Cell[25247, 596, 8925, 173, 1308, "Output",ExpressionUUID->"fd6d5ef2-6c87-4555-b9df-d858cdf3f494"]
+}, Open  ]],
+Cell[34187, 772, 8839, 170, 1300, InheritFromParent,ExpressionUUID->"fce46563-cab3-43a0-8770-9b2df1131378"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

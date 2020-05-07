@@ -1,0 +1,407 @@
+% Exam Template for UMTYMP and Math Department courses
+%
+% Using Philip Hirschhorn's exam.cls: http://www-math.mit.edu/~psh/#ExamCls
+%
+% run pdflatex on a finished exam at least three times to do the grading table on front page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% These lines can probably stay unchanged, although you can remove the last
+% two packages if you're not making pictures with tikz.
+\documentclass[11pt]{exam}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+\RequirePackage{tikz, pgflibraryplotmarks}
+
+% By default LaTeX uses large margins.  This doesn't work well on exams; problems
+% end up in the "middle" of the page, reducing the amount of space for students
+% to work on them.
+\usepackage[margin=1in]{geometry}
+
+
+% Here's where you edit the Class, Exam, Date, etc.
+\newcommand{\class}{MAT 221}
+\newcommand{\term}{Spring 2020}
+\newcommand{\examnum}{Final Exam}
+\newcommand{\examdate}{4/27/2020}
+\newcommand{\timelimit}{120 Minutes}
+
+% For an exam, single spacing is most appropriate
+\singlespacing
+% \onehalfspacing
+% \doublespacing
+
+% For an exam, we generally want to turn off paragraph indentation
+\parindent 0ex
+
+\begin{document} 
+
+% These commands set up the running header on the top of the exam pages
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+\begin{flushright}
+\begin{tabular}{p{2.8in} r l}
+\textbf{\class} & \textbf{Name (Print):} & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\textbf{Time Limit: \timelimit} & Student ID & \makebox[2in]{\hrulefill}
+\end{tabular}\\
+\end{flushright}
+\rule[1ex]{\textwidth}{.1pt}
+
+
+This exam contains \numpages\ pages (including this cover page) and
+\numquestions\ problems.  Check to see if any pages are missing.  Enter
+all requested information on the top of this page, and put your initials
+on the top of every page, in case the pages become separated.\\
+
+%You may \textit{not} use your books, notes, or any calculator on this exam.\\
+You may use your books, notes, or any calculator on this exam. Cheating (copy from another student or allow others to copy) during exams will be reported to College and fail the exam \\
+
+You are required to show your work on each problem on this exam.  The following rules apply:\\
+
+\begin{minipage}[t]{3.7in}
+\vspace{0pt}
+\begin{itemize}
+
+\item \textbf{If you use a ``fundamental theorem'' you must indicate this} and explain
+why the theorem may be applied.
+
+\item \textbf{Organize your work}, in a reasonably neat and coherent way, in
+the space provided. Work scattered all over the page without a clear ordering will 
+receive very little credit.  
+
+\item \textbf{Mysterious or unsupported answers will not receive full
+credit}.  A correct answer, unsupported by calculations, explanation,
+or algebraic work will receive no credit; an incorrect answer supported
+by substantially correct calculations and explanations might still receive
+partial credit.
+
+
+\item If you need more space, use the back of the pages; clearly indicate when you have done this.
+\end{itemize}
+
+Do not write in the table to the right.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{2.3in}
+\vspace{0pt}
+%\cellwidth{3em}
+\gradetablestretch{2}
+\vqword{Problem}
+\addpoints % required here by exam.cls, even though questions haven't started yet.	
+\gradetable[v]%[pages]  % Use [pages] to have grading table by page instead of question
+
+\end{minipage}
+\newpage % End of cover page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% See http://www-math.mit.edu/~psh/#ExamCls for full documentation, but the questions
+% below give an idea of how to write questions [with parts] and have the points
+% tracked automatically on the cover page.
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{questions}
+
+% Basic question
+
+\addpoints
+\question[8]
+Let 
+\[   f(x)=\left\{
+\begin{array}{ll}
+      x^{2}, & x\leq 0 \\
+      x-1,   & x > 0 \  \text{and} \ x \neq 2.\\
+      -3,  & x = 2\\
+\end{array} 
+\right. \]
+
+
+Find each limit (if it exists).
+
+\begin{minipage}{.25\linewidth}
+\begin{equation*}
+1).  \lim_{x\to 0^{-}}f(x)=
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.25\linewidth}
+\begin{equation*}
+2). \lim_{x\to 0^{+}}f(x)=
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.25\linewidth}
+\begin{equation*}
+3). \lim_{x\to 0}f(x)=
+\end{equation*}
+\end{minipage}
+\begin{minipage}{.25\linewidth}
+\begin{equation*}
+4). f(0)=
+\end{equation*}
+\end{minipage}
+\\
+\\
+\\
+\\
+\begin{minipage}{.25\linewidth}
+\begin{equation*}
+5).  \lim_{x\to 2^{-}}f(x)=
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.25\linewidth}
+\begin{equation*}
+6). \lim_{x\to 2^{+}}f(x)=
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.25\linewidth}
+\begin{equation*}
+7). \lim_{x\to 2}f(x)=
+\end{equation*}
+\end{minipage}
+\begin{minipage}{.25\linewidth}
+\begin{equation*}
+8). f(2)=
+\end{equation*}
+\end{minipage}
+\\
+\\
+\\
+\\
+
+
+
+\addpoints
+\question[20] Find the value of the limit, and, when applicable, indicate the limit theorems being used.  %\ans{(sec. 0.8 \#15)}
+
+\begin{minipage}{.3\linewidth}
+\begin{equation*}
+ a). \lim_{x\to 2} \frac{x^{2}-3x+2}{x^{2}+x-6}
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.7\linewidth}
+\begin{equation*}
+b). \lim_{t\to 3^{-}} \frac{t^{2}-t-6}{|t-3|}
+\end{equation*}
+\end{minipage}
+\vfill\vfill
+
+\begin{minipage}{.3\linewidth}
+\begin{equation*}
+c). \lim_{x\to -3^{+}} \frac{x+2}{x+3}
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{.7\linewidth}
+\begin{equation*}
+d). \lim_{x\to0} \frac{(\sin{(2t)})(1-\cos{(3t)})}{6t^{2}}
+%d). \lim_{x\to0} \frac{1-\cos{x}}{\sin{x}}
+\end{equation*}
+\end{minipage}
+\vfill\vfill
+
+
+
+
+
+%
+%\addpoints
+%\question[12] 
+%Let 
+%\[
+%f(x)=\frac{x^{2}-4}{|x-2|}
+%\]
+%
+%Find each limit (if it exists).
+%
+%\begin{minipage}{.3\linewidth}
+%\begin{equation*}
+%a). \lim_{x\to 2^{-}}f(x),
+%\end{equation*}
+%\end{minipage}%
+%\begin{minipage}{.3\linewidth}
+%\begin{equation*}
+%b). \lim_{x\to 2^{+}}f(x),
+%\end{equation*}
+%\end{minipage}%
+%\begin{minipage}{.3\linewidth}
+%\begin{equation*}
+%c). \lim_{x\to 2}f(x)
+%\end{equation*}
+%\end{minipage}
+%
+%\vfill\vfill
+
+
+
+% Question with parts
+
+
+
+
+%\addpoints
+%\question[8] 
+%Product Rule for Products of Three Factors:
+%\begin{parts}
+%\part Find $D_{x}[f(x)g(x)h(x)]$
+%\vfill
+%\part Use result of (a) to differentiate the function $D_{x}[(x^{2}-1)(2x+1)(x+3)]$
+%\vfill
+%\end{parts}
+
+
+
+% If you want the total number of points for a question displayed at the top,
+% as well as the number of points for each part, then you must turn off the point-counter
+% or they will be double counted.
+\newpage
+
+
+\addpoints
+\question[15] Find the value of $a$ and $k$ that makes $f(x)$ continuous at $x = -2$, where
+\[   f(x)=\left\{
+\begin{array}{ll}
+      2x+2, & x\leq -2 \\
+      a,    & x=-2 \\
+      kx,   & x > -2\\
+\end{array} 
+\right. \]
+\vfill
+
+\addpoints
+\question[15] Given that $\lim\limits_{x\to 2}f(x)=5$, $\lim\limits_{x\to 2}g(x)=2$, find the following limit.
+\begin{parts}
+\part $\lim\limits_{x\to 2}\left(2f(x)-g(x)\right)$
+\vfill
+\part $\lim\limits_{x\to 2}\frac{f(x)g(x)}{x}$
+\vfill
+\end{parts}
+
+%\addpoints
+%\question[15] Find the derivative of $y$ by using $\textbf{logarithmic differentiation}$
+%\[ 
+%y=(x+1)^{x}
+%\]
+%\vfill
+
+%\addpoints
+%\question[20] Find the limit L. Then use the $\varepsilon-\delta$ definition to prove that the limit is L.
+%\[ 
+%\lim_{x\to 1} (x+4)
+%\]
+%\vfill
+
+
+\addpoints
+\question[20] Let $g(x)=\sqrt{x}$, use the $\bf{Limit}$ $\bf{Definition}$ of the Derivative to find $g^{\prime}(x)$
+
+\vfill\vfill
+
+\newpage
+
+
+\addpoints
+\question[32] 
+
+Find the following derivatives.
+
+\begin{parts}
+\part $f(x)=2e^{5x}+\frac{1}{\sqrt[5]{x^{3}}}-\pi$
+\vfill
+\part  $f(x)=e^{x}\sec{x}$
+\vfill
+\part  $f(x)=\frac{(x^{2}+1)(x^{3}+2)}{x^{5}}$
+\vfill
+\part  $f(x)=\sqrt[3]{2x^{3}+7x+3}$
+\vfill
+\end{parts}
+
+
+
+
+
+
+
+\newpage
+
+\addpoints
+\question[10]
+Let $f(x)=(3x-1)e^{x}$. For which $x$ is the slope of the tangent line to $f$ positive? Negative? Zero?%\ans{(sec. 2.2 \#40)}
+\vfill
+
+
+\addpoints
+\question[15]
+Consider the function
+\[ 
+%f(x)=\sin^{2}{x}+\cos{x}
+f(x)=2\sin{(x)}-\frac{1}{2}\cos{(2x)}
+\]
+Write an equation for the slope of the tangent line at the point $x=\frac{\pi}{3}$.
+\vfill
+
+
+\newpage
+
+
+
+
+
+
+\addpoints
+\question[15]
+
+Find the absolute minimum and maximum values of the function on given interval
+\[
+f(t)=2t^{3}+3t^{2}-12t+4, \ \ \ [-4, 2]
+\]
+\vfill
+
+\addpoints
+\question[20]
+%Given function $f$ with $f^{\prime}(x) = \frac{4-4x^{2}}{ (x^{2}+1)^{2}}$ and $f^{\prime\prime}(x) = \frac{8x^{3}-24x}{ (x^{2}+1)^{3}}$ . 
+%\begin{parts}
+%  \part Give the interval(s) on which the graph of $y = f(x)$ is concave up. Write your answer in interval form. 
+%\vfill
+%  \part Give the interval(s) on which the graph of $y = f(x)$ is increasing or decreasing. Write your answer in interval form. 
+%\vfill
+%\end{parts}
+%We need to enclose a rectangular field with a fence. We have 500 feet of fencing material and a building is on one side of the field and so won’t need any fencing. Determine the dimensions of the field that will enclose the largest area.
+Consider the given equation $4x^{2}+e^{xy}+7y^{3}=13$. Assume that it determines an implicit differentiable function $f$ such that $y=f(x)$. Find $\frac{dy}{dx}$
+\vfill
+\vfill
+
+
+
+%\newpage
+%\addpoints
+%\question[20] (Closed box problem). We need a closed rectangular cardboard box with a square top, a square bottom, and a volume of 32 $m^{3}$. Find the dimensions of the valid box
+%that requires the least amount of cardboard, and find the amount of cardboard needed. 
+%\vfill
+
+\newpage
+\addpoints
+\question[30] Sketch the graph of $y = f(x)$, where $f(x) = x^{4} - 4x^{3}$ in the usual xy-plane.
+\begin{parts}
+  \part Find the domain of function $f$ and $x$-intercepts, $y$-intercepts.
+\vfill
+  \part Find all critical numbers of $f$ and show where $f$ is increasing or decreasing
+\vfill
+  \part Find all possible inflection number (if any) and show where the graph is concave up or concave down.
+\vfill
+  \part Classify all points at critical numbers as local maximum points, local minimum points, or neither.
+\vfill
+  \part Sketch the graph of function $f$. Show all steps, as we have done in class.
+\vfill
+\end{parts}
+
+
+
+
+
+\end{questions}
+\end{document}
