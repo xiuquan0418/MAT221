@@ -16,7 +16,7 @@ The course covers the first four chapters in course textbook (Calculus, Early Tr
 
 | Lecture |  Topic | Readings |
 |-----------|---------------|-------------------------------|
-| August 03, <br> 2020 | Function Review. <li> Linear Functions, </li> <li> Power Functions </li>   | [Lecture 1 Slides](Jupyter_Notes/Lecture01_Function_Review.ipynb) </br> Section 1.1, 1.2, 1.3 </br> |
+| August 03, <br> 2020 | Function Review. <li> Linear Functions, </li> <li> Power Functions </li>   | [Lecture 1 Slides](Lecture_Note_PPT/9781337613927_Stewart_CalcET9e_01_01.pptx) </br> Section 1.1, 1.2, 1.3 </br> |
 | August 10, <br> 2020 | Function Review. <li> Linear Functions, </li> <li> Power Functions </li>   | [Lecture 1 Slides](Jupyter_Notes/Lecture01_Function_Review.ipynb) </br> Section 1.1, 1.2, 1.3 </br> |
  
  
