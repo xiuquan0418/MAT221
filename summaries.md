@@ -24,28 +24,7 @@ The course covers the first four chapters in course textbook (Calculus, Early Tr
  |5| W |             | Limit laws. Squeeze theorem.             | [Lecture 5 Slides]() |  |
  |6| F |             | Continuity, asymptotes.             | [Lecture 6 Slides]() | [HW2]() |
  |7| M |             | Definition of derivative. Derivative as a function.            | [Lecture 1 Slides]() |  |
- |8| W |             | Review.             | [Lecture 7 Slides]() |  |
- |9| F |             |              | [Lecture 8 Slides]() | [HW3]() |
- |10| M |             |              | [Lecture 9 Slides]() |  |
- |11| W |             |              | [Lecture 10 Slides]() |  |
- |12| F |             |              | [Lecture 11 Slides]() | [HW4]() |
- |13| M |             |              | [Lecture 12 Slides]() |  |
- |14| W |             |              | [Lecture 13 Slides]() |  |
- |15| F |             |              | [Lecture 14 Slides]() | [HW5]() |
- |16| M |             |              | [Lecture 15 Slides]() |  |
- |17| W |             |              | [Lecture 16 Slides]() |  |
- |18| F |             |              | [Lecture 17 Slides]() | [HW6]() |
- |19| M |             |              | [Lecture 18 Slides]() |  |
- |20| W |             |              | [Lecture 19 Slides]() |  |
- |21| F |             |              | [Lecture 20 Slides]() | [HW7]() |
- |22| M |             |              | [Lecture 21 Slides]() |  |
- |23| W |             |              | [Lecture 22 Slides]() |  |
- |24| F |             |              | [Lecture 23 Slides]() | [HW8]() |
- |25| M |             |              | [Lecture 24 Slides]() |  |
- |26| W |             |              | [Lecture 25 Slides]() |  |
- |27| F |             |              | [Lecture 26 Slides]() | [HW9]() |
- |28| M |             |              | [Lecture 27 Slides]() |  |
-
+ 
  
 
 # Information on Calculus Classes: 
